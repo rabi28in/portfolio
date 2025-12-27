@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabindranath Pattnaik | LXD/UX Developer–Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== VEDIC-ALIGNED LXD PORTFOLIO STYLES ===== */
+        :root {
+            /* 1️⃣ Global Background (Foundation & Calm) */
+            --bg-cream: #FBF3E6;
+            
+            /* 2️⃣ Primary Headings & Brand Identity (Authority & Confidence) */
+            --primary-maroon: #7A1E1E;
+            
+            /* 3️⃣ Body Text & Long Content (Clarity & Professionalism) */
+            --text-charcoal: #2E2E2E;
+            
+            /* 4️⃣ Call-to-Action Buttons & Key Highlights (Visibility & Growth) */
+            --accent-gold: #D4A017;
+            
+            /* 5️⃣ Navigation & Structural Elements (Stability & Order) */
+            --nav-maroon: #651515;
+            
+            /* 6️⃣ Skill Tags, Icons & Micro-UI Elements (Logic & Communication) */
+            --skill-olive: #6B8E23;
+            
+            /* 7️⃣ Cards, Case Study Blocks & Panels (Depth & Focus) */
+            --card-ivory: #FFF9EE;
+            
+            /* Utility Colors */
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(122, 30, 30, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-charcoal);
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            color: var(--primary-maroon);
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-maroon), var(--accent-gold));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-maroon);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-charcoal);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--primary-maroon);
+            color: white;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: var(--nav-maroon);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-maroon);
+            color: var(--primary-maroon);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-maroon);
+            color: white;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--text-charcoal);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--accent-gold);
+            opacity: 0.9;
+            transform: translateY(-3px);
+        }
+
+        .accent-text {
+            color: var(--accent-gold);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(251, 243, 230, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(122, 30, 30, 0.08);
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-maroon);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 120px;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #F5F0E6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 2.5rem;
+        }
+
+        .typing-container {
+            min-height: 60px;
+            margin-bottom: 2rem;
+        }
+
+        .typing-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-maroon);
+            border-right: 3px solid var(--accent-gold);
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent-gold); }
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 5px solid var(--card-ivory);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--nav-maroon);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 5px solid var(--card-ivory);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(107, 142, 35, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--skill-olive);
+            border: 1px solid rgba(107, 142, 35, 0.2);
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--card-ivory);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(122, 30, 30, 0.12);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: rgba(122, 30, 30, 0.1);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .step-icon {
+            font-size: 3rem;
+            color: var(--primary-maroon);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            background-color: rgba(122, 30, 30, 0.1);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-maroon);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-maroon);
+            color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--card-ivory);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(122, 30, 30, 0.1);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(122, 30, 30, 0.12);
+        }
+
+        .portfolio-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-tag {
+            background-color: rgba(212, 160, 23, 0.1);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-gold);
+        }
+
+        .portfolio-btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--nav-maroon);
+            color: white;
+        }
+
+        .contact h2, .contact p, .contact h3, .contact h4 {
+            color: white;
+        }
+
+        .contact h2:after {
+            background: linear-gradient(to right, var(--accent-gold), white);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 160, 23, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            transform: translateY(-5px);
+            color: var(--text-charcoal);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                margin-bottom: 60px;
+            }
+            
+            .hero-btns {
+                justify-content: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .typing-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-cream);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(122, 30, 30, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .typing-text {
+                font-size: 1.3rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero {
+                padding-top: 140px;
+                padding-bottom: 80px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .typing-container {
+                min-height: 50px;
+            }
+            
+            .typing-text {
+                font-size: 1.1rem;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Rabindranath <span>Pattnaik</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#process">My Process</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Designing <span class="accent-text">Transformative</span> Learning Experiences</h1>
+                    <p>I'm Rabindranath Pattnaik, a Learning Experience Designer & UX Developer specializing in creating engaging, effective e-learning solutions that drive measurable results.</p>
+                    
+                    <!-- Typing Animation Container -->
+                    <div class="typing-container">
+                        <div class="typing-text" id="typingText"></div>
+                    </div>
+                    
+                    <div class="hero-btns">
+                        <a href="#portfolio" class="btn btn-gold">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Download CV</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://drive.google.com/file/d/16Cmo1jG1Wz_tw5ws8k0al2cheP9uZeV8/view">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Counters -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10+">0</div>
+                    <div class="stat-text">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="80+">0</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-text">% Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>With 10+ years of experience in instructional design and e-learning development</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://drive.google.com/file/d/16Cmo1jG1Wz_tw5ws8k0al2cheP9uZeV8/view?usp=sharing" alt="Rabindranath Pattnaik">
+                </div>
+                <div class="about-text">
+                    <h3>Creating Learning That Engages & Transforms</h3>
+                    <p>I'm passionate about designing learning experiences that are not only informative but also engaging, interactive, and aligned with business objectives. My approach combines pedagogical expertise with modern technology to create solutions that learners love.</p>
+                    <p>I specialize in the full learning design lifecycle—from analysis and strategy to development, implementation, and evaluation. My work is grounded in evidence-based practices like ADDIE, SAM, and Design Thinking.</p>
+                    <div class="skills-list">
+                        <div class="skill-tag">Instructional Design</div>
+                        <div class="skill-tag">E-Learning Development</div>
+                        <div class="skill-tag">Learning Strategy</div>
+                        <div class="skill-tag">UX for Learning</div>
+                        <div class="skill-tag">Articulate Storyline</div>
+                        <div class="skill-tag">Adobe Captivate</div>
+                        <div class="skill-tag">LMS Administration</div>
+                        <div class="skill-tag">Gamification</div>
+                        <div class="skill-tag">VR/AR Learning</div>
+                        <div class="skill-tag">Assessment Design</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Design Process</h2>
+                <p>A structured approach to creating effective learning experiences</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Discover & Analyze</h3>
+                    <p>Understanding business goals, learner needs, and technical constraints through stakeholder interviews and data analysis.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Design & Strategy</h3>
+                    <p>Creating learning objectives, content structure, interaction design, and visual mockups aligned with pedagogical principles.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Develop & Build</h3>
+                    <p>Implementing the design using appropriate tools and technologies, ensuring accessibility and cross-platform compatibility.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Deploy & Evaluate</h3>
+                    <p>Launching the solution, tracking performance metrics, and making data-driven improvements for optimal results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Selected projects showcasing my approach and expertise</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="corporate">Corporate Training</button>
+                <button class="filter-btn" data-filter="higher-ed">Higher Education</button>
+                <button class="filter-btn" data-filter="compliance">Compliance</button>
+                <button class="filter-btn" data-filter="software">Software Training</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Leadership Development Program" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Leadership Development Program</h3>
+                        <p>A comprehensive 12-module leadership program for a Fortune 500 company, featuring interactive scenarios and personalized learning paths.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Articulate Storyline</span>
+                            <span class="portfolio-tag">Video Production</span>
+                            <span class="portfolio-tag">Adaptive Learning</span>
+                        </div>
+                        <a href="#" class="btn btn-small portfolio-btn btn-gold">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="software">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="CRM Software Training" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>CRM Software Training Suite</h3>
+                        <p>Interactive software simulation training for a new CRM platform with in-application guidance and step-by-step tutorials.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Adobe Captivate</span>
+                            <span class="portfolio-tag">Software Simulation</span>
+                            <span class="portfolio-tag">Microlearning</span>
+                        </div>
+                        <a href="#" class="btn btn-small portfolio-btn btn-gold">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="compliance">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Compliance" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Cybersecurity Compliance Course</h3>
+                        <p>Gamified compliance training that transformed regulatory content into an engaging detective-style narrative with branching scenarios.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Gamification</span>
+                            <span class="portfolio-tag">Branching Scenarios</span>
+                            <span class="portfolio-tag">xAPI</span>
+                        </div>
+                        <a href="#" class="btn btn-small portfolio-btn btn-gold">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="higher-ed">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Anatomy VR Lab" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Anatomy VR Lab for Medical Students</h3>
+                        <p>Immersive virtual reality experience allowing medical students to explore human anatomy in 3D with interactive quizzes.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Virtual Reality</span>
+                            <span class="portfolio-tag">3D Modeling</span>
+                            <span class="portfolio-tag">Immersive Learning</span>
+                        </div>
+                        <a href="#" class="btn btn-small portfolio-btn btn-gold">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your learning initiatives? Let's collaborate</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Create Something Amazing Together</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Whether you need a complete learning solution or consultation on a specific challenge, feel free to reach out.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rabi28in@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9348299718</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Mumbai, India | Remote Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Rabindranath<span>Pattnaik</span></div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Rabindranath Pattnaik. All Rights Reserved. | LXD/UX Developer–Designer Portfolio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== VEDIC-ALIGNED LXD PORTFOLIO JAVASCRIPT =====
+
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // ===== MOBILE MENU TOGGLE =====
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // ===== PORTFOLIO FILTERING =====
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Filter items
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // ===== FORM SUBMISSION =====
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form values
+                const name = contactForm.querySelector('input[type="text"]').value;
+                const email = contactForm.querySelector('input[type="email"]').value;
+                
+                // In a real implementation, you would send this data to a server
+                // For this demo, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you at ${email} as soon as possible.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+            
+            // ===== HEADER SCROLL EFFECT =====
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 5px 20px rgba(122, 30, 30, 0.1)';
+                    header.style.padding = '0';
+                    document.querySelector('nav').style.padding = '15px 0';
+                } else {
+                    header.style.boxShadow = '0 5px 20px rgba(122, 30, 30, 0.05)';
+                    header.style.padding = '';
+                    document.querySelector('nav').style.padding = '25px 0';
+                }
+            });
+            
+            // ===== TYPING ANIMATION =====
+            const typingText = document.getElementById('typingText');
+            const texts = [
+                "Learning Strategy & Architecture",
+                "AI-Powered Learning Design",
+                "Immersive Learning Experiences",
+                "Microlearning Solutions",
+                "Gamified Learning Journeys"
+            ];
+            
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            
+            function type() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    // Deleting text
+                    typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    // Typing text
+                    typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+                
+                // If text is fully typed
+                if (!isDeleting && charIndex === currentText.length) {
+                    // Pause at the end
+                    typingSpeed = 2000;
+                    isDeleting = true;
+                } 
+                // If text is fully deleted
+                else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex++;
+                    
+                    // Loop back to first text
+                    if (textIndex === texts.length) {
+                        textIndex = 0;
+                    }
+                }
+                
+                setTimeout(type, typingSpeed);
+            }
+            
+            // Start typing animation
+            setTimeout(type, 1000);
+            
+            // ===== ANIMATED COUNTERS =====
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200; // The lower the slower
+            
+            function startCounter(counter) {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => startCounter(counter), 10);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+            
+            // Start counters when stats section is visible
+            function checkCounterVisibility() {
+                const statsSection = document.querySelector('.stats');
+                const sectionPosition = statsSection.getBoundingClientRect();
+                
+                // If stats section is in viewport
+                if (sectionPosition.top < window.innerHeight - 100) {
+                    counters.forEach(counter => {
+                        startCounter(counter);
+                    });
+                    // Remove the scroll listener after counters start
+                    window.removeEventListener('scroll', checkCounterVisibility);
+                }
+            }
+            
+            // Start counters on page load if already visible, otherwise on scroll
+            if (document.querySelector('.stats').getBoundingClientRect().top < window.innerHeight) {
+                counters.forEach(counter => {
+                    startCounter(counter);
+                });
+            } else {
+                window.addEventListener('scroll', checkCounterVisibility);
+            }
+            
+            // ===== SMOOTH SCROLLING FOR ANCHOR LINKS =====
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
